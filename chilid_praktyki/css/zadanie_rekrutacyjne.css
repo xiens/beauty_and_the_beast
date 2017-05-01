@@ -1,0 +1,64 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003868;
+    background-color: #80B8E8;
+    margin: 6mm;
+}
+
+
+.page_control {
+    position: fixed;
+    top: 770px;
+    border: 1px solid gray;
+    background-color: #d0f0f6;
+    text-align: left;
+    padding: 8px;
+    width: 180px;
+    height: 60px;
+}
+.sort {
+    position: relative;
+    background-color: aliceblue;
+    width: 500px;
+
+}
+
+.filters {
+    position: relative;
+    background-color: aliceblue;
+    margin-top: 10px;
+    width: 500px;
+
+
+}
+.date{
+    background-color: aliceblue;
+    width: 500px;
+    height:80px;
+    margin-top: 10px;
+}
+.datepicker{
+    position: relative;
+    background-color:aliceblue;
+    width: 50%;
+    height:100px;
+    float: left;
+}
+.datebuttons{
+    position: relative;
+    background-color: aliceblue;
+    width: 50%;
+    height:100px;
+    float: right;
+}
+
+.table {
+    border: 2px solid gray;
+    border-collapse: collapse;
+    background-color: #ffffff;
+
+}
+tr,td {
+    border: 2px solid gray;
+}

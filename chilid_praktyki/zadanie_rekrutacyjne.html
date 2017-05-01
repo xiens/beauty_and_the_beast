@@ -1,0 +1,117 @@
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title> Beauty and the Beast </title> 
+    <link href="css/zadanie_rekrutacyjne.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.datepick.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/jquery.datepick.js"></script>
+	<script src="js/zadanie_rekrutacyjne.js"></script>
+</head>
+
+
+<body>
+<div id="container">
+<h2>Beauty and the Beast</h2> 
+
+<div id="sort" class="sort">
+        Sort by:
+    <select  id="select_obj" name="select_obj" onchange="sortKey()" >
+      <option>id</option>
+      <option>firstName</option>
+      <option>lastName</option>
+      <option>dateOfBirth</option>
+      <option>function</option>
+      <option>experience</option>
+     </select>
+
+
+    <select  id="sort_low_or_high" name="sort_low_or_high" onchange="sort()" >
+            <option> sort lowest first </option>
+            <option> sort highest first </option>
+    </select>
+
+    <button id="pag " value= "pag" onclick="changePagination(pagination)"> Pagination ON/OFF</button>
+</div>
+
+<div id="filters" class="filters">
+    Filter by:
+    <select  id="filtrID" name="filtrID" onchange="filtrID()" >
+        <option> filter by ID </option>
+        <option> 1-4 </option>
+        <option> 5-8 </option>
+        <option> 9-12 </option>
+    </select>
+
+    <select  id="filtrFirstName" name="filtrFirstName" onchange="filtrFirstName(table)" >
+        <option> filter by firstName </option>
+        <option> a-h </option>
+        <option> i-r </option>
+        <option> s-z </option>
+    </select>
+
+    <select  id="filtrSecondName" name="filtrSecondName" onchange="filtrSecondName(table)" >
+        <option> filter by secondName </option>
+        <option> a-h </option>
+        <option> i-r </option>
+        <option> s-z </option>
+    </select>
+
+    <select  id="filtrFunction" name="filtrFunction" onchange="filtrFunction()" >
+        <option> filter by function </option>
+        <option> kamerdyner </option>
+        <option> kucharka </option>
+        <option> lokaj </option>
+        <option> pokojowka </option>
+    </select>
+
+    <select  id="filtrExperience" name="filtrExperience" onchange="filtrExperience()" >
+        <option> filter by experience </option>
+        <option> 1-4 </option>
+        <option> 5-8 </option>
+        <option> 9-12 </option>
+    </select>
+</div>
+<div class="date">
+<div id="datepicker" class="datepicker">
+    <p>Pick date from<input type="text" id="fromDate" name="fromDate"></p>
+    <p>Pick date to <input type="text" id="toDate" name="toDate"></p>
+</div>
+
+ <div class="datebuttons">
+     <button id="filterDate" onclick="filtrDate()"> Filter date </button>
+     <button id="resetFilterDate" onclick="resetDateFilter()"> Reset filtering by date </button>
+ </div>
+</div>
+
+
+
+&nbsp;<div id="output">
+
+
+</div>
+
+
+</table>
+    <table id="nameTable" style="width:300px;" class="table">
+	<tbody>
+        <tr>
+            <td>test</td>
+        </tr>
+	</tbody>
+    </table>
+
+    <script> initSort();</script>
+    <div id="page_control" class="page_control">
+<p id="demo"> Page number 0 </p>
+  <input type="button" value="previous" onclick="pageNum--;showOnPage()">
+
+  <input type="button" value="next" onclick="pageNum++;showOnPage()">
+    </div>
+</div>
+
+
+
+</body>
+</html>
